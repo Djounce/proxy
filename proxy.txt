@@ -1,1 +1,3 @@
-pujxcndg6pjynz7:idfp7wenbfjvdj8@rp.proxyscrape.com:6060
+172.65.64.100:6060:pujxcndg6pjynz7:idfp7wenbfjvdj8
+pujxcndg6pjynz7:idfp7wenbfjvdj8@172.65.64.100:6060
+http://pujxcndg6pjynz7:idfp7wenbfjvdj8@172.65.64.100:6060
