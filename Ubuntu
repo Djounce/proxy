@@ -1,15 +1,15 @@
-# Systemd'yi destekleyen bir temel görüntü kullanın, örneğin Ubuntu 
-ubuntu'dan:20.04 
+# Use a base image that supports systemd, for example, Ubuntu
+FROM ubuntu:20.04
 
-# Gerekli paketleri kurun 
-apt-get update && \ 
-apt-get install -y Shellinabox && \ 
-apt-get install -y systemd && \ 
-apt-get clean ÇALIŞTIRIN && \ 
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
-RUN echo 'root:root' | chpasswd 
-# Web tabanlı terminal bağlantı noktasını açığa çıkarın 
-EXPOSE 4200 
+# Install necessary packages
+RUN apt-get update && \
+apt-get install -y shellinabox && \
+apt-get install -y systemd && \
+apt-get clean && \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN echo 'root:root' | chpasswd
+# Expose the web-based terminal port
+EXPOSE 4200
 
-# Shellinabox 
-CMD'yi başlatın ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]Kopyala
+# Start shellinabox
+CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]Kopyala
